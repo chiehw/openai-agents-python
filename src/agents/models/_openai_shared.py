@@ -45,7 +45,6 @@ def get_use_responses_by_default() -> bool:
     # 优先使用settings，若不存在则尝试从内部缓存获取
     try:
         from agents.core.settings import settings
-        print("setting", settings.ENABLE_RESPONSE_API)
         return settings.ENABLE_RESPONSE_API
     except (ImportError, AttributeError):
         from agents.logger import logger
