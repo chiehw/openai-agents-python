@@ -4,8 +4,11 @@ from openai import AsyncOpenAI
 
 _default_openai_key: str | None = None
 _default_openai_client: AsyncOpenAI | None = None
-_use_responses_by_default: bool = True
-
+# _use_responses_by_default: bool = True
+# CHIEH-start
+# 默认不使用responses
+_use_responses_by_default: bool = False
+# CHIEH-end
 
 def set_default_openai_key(key: str) -> None:
     global _default_openai_key

@@ -60,8 +60,14 @@ class BackendSpanExporter(TracingExporter):
         self.max_delay = max_delay
 
         # Keep a client open for connection pooling across multiple export calls
-        self._client = httpx.Client(timeout=httpx.Timeout(timeout=60, connect=5.0))
-
+        # self._client = httpx.Client(timeout=httpx.Timeout(timeout=60, connect=5.0))
+        # CHIEH-start
+        # 支持代理
+        self._client = httpx.Client(
+            timeout=httpx.Timeout(timeout=60, connect=5.0),
+            proxy=os.environ.get("HTTP_PROXY"),
+        )
+        # CHIEH-end
     def set_api_key(self, api_key: str):
         """Set the OpenAI API key for the exporter.
 
