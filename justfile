@@ -10,5 +10,5 @@ agent DEFAULT="examples/mcp/filesystem_example/main.py":
     @scripts/run_agent.sh {{DEFAULT}}
 
 # 列出所有可用的examples
-list-examples:
+list:
     @find examples -name "main.py" | sort 
