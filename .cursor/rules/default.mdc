@@ -3,9 +3,9 @@ description:
 globs: 
 alwaysApply: true
 ---
-1. 对于新功能的开发都在 core 文件夹中, core 文件夹中的测试用例放在 core/tests 中. 
+1. 对于新功能的开发都在 src/agents/core 文件夹中, src/agents/core 文件夹中的测试用例放在 src/agents/core/tests 中. 
 
-2. 如果需要在 src 中修改代码请按照如下要求
+2. 如果需要在除了 src/agents/core 之外的文件修改代码请按照如下要求
 2.1 如果需要删除某行, 先注释掉函数, 再到下方新增代码，新增代码时加上 CHIEH-start 和 CHIEH-end
 ```python
 # self._client = httpx.Client(timeout=httpx.Timeout(timeout=60, connect=5.0))

@@ -9,6 +9,7 @@ authors = [{ name = "OpenAI", email = "support@openai.com" }]
 dependencies = [
     "openai>=1.87.0",
     "pydantic>=2.10, <3",
+    "pydantic-settings>=2.0",
     "griffe>=1.5.6, <2",
     "typing-extensions>=4.12.2, <5",
     "requests>=2.0, <3",
